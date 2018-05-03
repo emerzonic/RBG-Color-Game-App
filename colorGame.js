@@ -105,11 +105,11 @@ function pickcolor(){
 
 function generateRandomColors (num) {
 	//make an array
-	var arr = []
+	var arr = [];
 	//repeat num times
 	for (var i = 0; i < num; i++) {
 	//get random color and push into arr
-	arr.push(randomColor())
+	arr.push(randomColor());
 	}
 	//return that array
 	return arr;
