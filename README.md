@@ -7,4 +7,4 @@ Your job is to select the correct corresponding color.
 * CSS3
 * JavaScript
 
-#### Click[here] to play(https://emerzonic.github.io/RBG-Color-Game-App/)
+#### To play Click[here](https://emerzonic.github.io/RBG-Color-Game-App/)
