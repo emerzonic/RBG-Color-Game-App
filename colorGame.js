@@ -1,11 +1,11 @@
-var numberOfSquares = 6;
-var pickedColor;
-var squares = document.querySelectorAll(".squares");
-var colorDisplay = document.getElementById("colorDisplay");
-var messageDisplay = document.querySelector("#message");
-var h1 = document.querySelector("h1");
-var resetButton = document.querySelector("#resetButton");
-var modeButtons = document.querySelectorAll(".mode");
+let numberOfSquares = 6;
+let pickedColor;
+const squares = document.querySelectorAll(".squares");
+const colorDisplay = document.getElementById("colorDisplay");
+const messageDisplay = document.querySelector("#message");
+const h1 = document.querySelector("h1");
+const resetButton = document.querySelector("#resetButton");
+const modeButtons = document.querySelectorAll(".mode");
 
 init();
 
@@ -16,7 +16,7 @@ function init() {
 }
 
 function setupModeButtons() {
-	for (var i = 0; i < modeButtons.length; i++) {
+	for (let i = 0; i < modeButtons.length; i++) {
 		modeButtons[i].addEventListener("click", function () {
 			modeButtons[0].classList.remove("selected");
 			modeButtons[1].classList.remove("selected");
@@ -31,7 +31,7 @@ function setupSquares() {
 	colorDisplay.textContent = pickedColor;
 	squares.forEach(square => {
 		square.addEventListener("click", function () {
-			var clickedColor = this.style.backgroundColor;
+			const clickedColor = this.style.backgroundColor;
 			if (clickedColor === pickedColor) {
 				setCorrectGuessDisplay(clickedColor);
 			} else {
@@ -54,9 +54,9 @@ function setWrongGuessDisplay(square) {
 }
 
 function changeColor(color) {
-	for (var i = 0; i < squares.length; i++) {
-		squares[i].style.backgroundColor = color;
-	}
+	squares.forEach(square => {
+		square.style.backgroundColor = color;
+	})
 }
 
 function reset() {
@@ -81,7 +81,7 @@ resetButton.addEventListener("click", function () {
 });
 
 function pickcolor(colors) {
-	var random = Math.floor(Math.random() * colors.length);
+	const random = Math.floor(Math.random() * colors.length);
 	return colors[random];
 }
 
